@@ -40,8 +40,6 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/.medusa ./.medusa
 COPY --from=builder /app/medusa-config.js ./medusa-config.js
 COPY --from=builder /app/src ./src
-# Public folder might not exist, but copy if it does
-COPY --from=builder /app/public* ./public 2>/dev/null || true
 
 EXPOSE 9000
 
