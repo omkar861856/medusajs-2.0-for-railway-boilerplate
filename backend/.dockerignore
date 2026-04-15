@@ -1,0 +1,10 @@
+node_modules
+.medusa/server
+.medusa/admin
+dist
+.env
+.git
+.github
+README.md
+Dockerfile
+docker-compose.yml
