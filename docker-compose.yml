@@ -41,6 +41,7 @@ services:
       - MEDUSA_ADMIN_PASSWORD=${MEDUSA_ADMIN_PASSWORD:-supersecret}
       - NODE_ENV=development
       - MEDUSA_HOST=0.0.0.0
+      - MEDUSA_ADMIN_BACKEND_URL=${NEXT_PUBLIC_MEDUSA_BACKEND_URL:-http://localhost:9000}
     ports:
       - "9000:9000"
     depends_on:
