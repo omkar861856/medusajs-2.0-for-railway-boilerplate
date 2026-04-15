@@ -19,8 +19,8 @@ COPY . .
 # Set environment variables for build
 ARG NEXT_PUBLIC_MEDUSA_BACKEND_URL
 ENV NEXT_PUBLIC_MEDUSA_BACKEND_URL=$NEXT_PUBLIC_MEDUSA_BACKEND_URL
-
-RUN pnpm run build
+# Use build:next to skip the 'await-backend' check during Docker build
+RUN pnpm run build:next
 
 # --- Runner ---
 FROM base AS runner
