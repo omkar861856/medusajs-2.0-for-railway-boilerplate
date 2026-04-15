@@ -39,6 +39,10 @@ const medusaConfig = {
       jwtSecret: JWT_SECRET,
       cookieSecret: COOKIE_SECRET
     },
+    databaseDriverOptions: {
+      ssl: false,
+      sslmode: "disable",
+    },
     build: {
       rollupOptions: {
         external: ["@medusajs/dashboard", "@medusajs/admin-shared"]
